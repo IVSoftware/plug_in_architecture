@@ -44,7 +44,11 @@ namespace plug_in_architecture
                 // Exclude copy of the SDK that gets put here when plugins are built.
                 if(Path.GetFileName(plugin) == "PlugInSDK.dll") continue;
 
+                // Be sure to use 'LoadFrom' not 'Load'
                 var asm = Assembly.LoadFrom(plugin);
+
+                // Check to make sure that any given *.dll 
+                // implements IPlugin before adding to list.
                 Type plugInType = 
                     asm.ExportedTypes
                     .Where(type =>
