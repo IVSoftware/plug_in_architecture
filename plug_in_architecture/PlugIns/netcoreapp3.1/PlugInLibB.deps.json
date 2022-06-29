@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "PlugInLibB/1.0.0": {
+        "dependencies": {
+          "PlugInSDK": "1.0.0"
+        },
+        "runtime": {
+          "PlugInLibB.dll": {}
+        }
+      },
+      "PlugInSDK/1.0.0": {
+        "runtime": {
+          "PlugInSDK.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PlugInLibB/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PlugInSDK/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
