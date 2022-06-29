@@ -21,8 +21,8 @@ namespace plug_in_architecture
             // FYI: Get an event whenever an assembly has been loaded.
             AppDomain.CurrentDomain.AssemblyLoad += (sender, e) =>
             {
-                var name = e.LoadedAssembly.FullName.Split(",").First();
-                if (name.Contains("PlugIn"))
+                var name = e.LoadedAssembly.FullName;
+                if (name.Split(",").First().Contains("PlugIn"))
                 {
                     Console.WriteLine($"{name}\nLoaded on-demand from:\n{e.LoadedAssembly.Location}\n");
                 }
